@@ -6,10 +6,6 @@ import javax.swing.JPanel;
 
 public class Background extends JPanel {
 
-	/**
-	 * 
-	 */
-	//khafe kardan e IDE :D
 	private static final long serialVersionUID = 1L;
 	private Image backgroundImage;
 

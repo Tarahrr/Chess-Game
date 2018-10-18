@@ -103,33 +103,30 @@ public class objCellMatrix {
 
 	}
 
-	// public void setPieceCell(int row, int column, int piece) {
-	// pieceMatrix[row][column] = piece;
-	// }
-	//
-	// public int[][] getPieceMatrix() {
-	// return pieceMatrix;
-	// }
+	 public void setPieceCell(int row, int column, int piece) {
+	 		pieceMatrix[row][column] = piece;
+	 }
+
+	 public int[][] getPieceMatrix() {
+	 		return pieceMatrix;
+	 }
 
 	public boolean checkWinner(int currentPlayer) {
 
-		// int checkPlayer = 0;
-		// if (currentPlayer == 1) {
-		// checkPlayer = 2;
-		// } else {
-		// checkPlayer = 1;
-		// }
-		// for (int row = 0; row < 8; row++) {
-		// for (int column = 0; column < 8; column++) {
-		// //TODO
-		// if (playerMatrix[row][column] == checkPlayer
-		// && pieceMatrix[row][column] == 5) // If the enemy's king
-		// // still remains
-		// {
-		// return false;
-		// }
-		// }
-		// }
-		return true;
+		int checkPlayer = 0;
+		if (currentPlayer == 1) {
+			checkPlayer = 2;
+		} else {
+		 	checkPlayer = 1;
+		}
+		for (int row = 0; row < 8; row++) {
+			for (int column = 0; column < 8; column++) {
+				if (playerMatrix[row][column] == checkPlayer
+					&& pieceMatrix[row][column] == 5) // If the enemy's king
+					//still remains
+					return false;
+				}
+			}
+			return true;	
 	}
 }
